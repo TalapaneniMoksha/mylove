@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OUR HEAVEN: Happy First Anniversary, Potititiiti!</title>
+    <style>
+        /* BASE STYLES */
+        body {
+            font-family: 'Georgia', serif; 
+            background-color: #000000;
+            color: #ffffff;
+            text-align: center;
+            margin: 0;
+            padding: 0;
+            /* Allow main vertical scroll, but prevent any horizontal scroll */
+            overflow-x: hidden; 
+            position: relative;
+        }
+        
+        .heaven-container {
+            min-height: 100vh;
+            position: relative;
+            z-index: 1;
+            overflow: hidden; 
+            background: radial-gradient(circle, #33001a 0%, #000000 70%);
+            padding-bottom: 50px;
+        }
+
+        /* HEADER */
+        header {
+            background-color: rgba(102, 0, 51, 0.8);
+            color: #ffffff;
+            padding: 20px;
+            font-size: 24px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            position: sticky;
+            top: 0;
+            z-index: 10;
+            border-bottom: 2px solid #ff6680;
+        }
+        
+        .back-link {
+            color: white;
+            text-decoration: none;
+            font-size: 1.1em;
+            padding: 10px 15px;
+            background: rgba(255, 255, 255, 0.2);
+            border-radius: 5px;
+        }
+
+        /* HERO SECTION */
+        .anniversary-hero {
+            padding: 60px 20px 20px;
+            color: #ff6680;
+            text-shadow: 0 0 15px #ff6680;
+        }
+        .hero-title {
+            font-size: 5em;
+            margin-bottom: 10px;
+            animation: pulse 1.5s infinite;
+        }
+        .hero-date {
+            font-size: 1.8em;
+            color: #ffffff;
+            margin-top: 0;
+        }
+
+        /* VIRTUAL CAKE STYLING - RESPONSIVE FIT */
+        .cake-container {
+            /* Restrict max width so it doesn't get huge on ultra-wide screens */
+            max-width: 700px; 
+            margin: 0 auto;
+            padding: 50px 0;
+            overflow: hidden; /* Crucial: ensures no scrolling */
+            height: auto;
+        }
+        .virtual-cake {
+            /* Ensures image fits container width */
+            width: 100%; 
+            height: auto; 
+            object-fit: contain;
+            border-radius: 10px;
+            display: block;
+            margin: 0 auto;
+            box-shadow: 0 0 40px rgba(255, 102, 128, 0.8); 
+        }
+
+        /* NAVIGATION MENU */
+        .menu-grid {
+            margin-top: 50px;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 30px;
+            padding: 0 5%;
+        }
+        
+        .menu-item {
+            text-decoration: none;
+            background: #262626;
+            padding: 30px;
+            border-radius: 15px;
+            color: #ffffff;
+            transition: transform 0.3s, background 0.3s;
+            border: 2px solid #ff6680;
+            display: block;
+        }
+        .menu-item:hover {
+            transform: scale(1.05);
+            background: #33001a;
+            box-shadow: 0 0 25px #ff6680;
+        }
+        .menu-item h3 {
+            font-size: 1.8em;
+            margin-top: 0;
+            color: #ff6680;
+        }
+        .menu-item p {
+            font-size: 1.1em;
+        }
+
+        /* ANIMATIONS */
+        @keyframes pulse {
+            0% { transform: scale(1); opacity: 1; }
+            50% { transform: scale(1.03); opacity: 0.95; }
+            100% { transform: scale(1); opacity: 1; }
+        }
+        
+    </style>
+</head>
+<body>
+    <div class="heaven-container">
+        
+        <header>
+            <span>One Year of Intense Love: Varsh ❤️ Moksh</span>
+            <a href="index.html" class="back-link">← Back to Home</a>
+        </header>
+        
+        <div class="anniversary-hero">
+            <p style="color: #cccccc;">Happy Anniversary, my beautiful Potititti!</p>
+            <h1 class="hero-title">A PRESENT MOMENT CELEBRATION 🎁</h1>
+            <p class="hero-date">December 4th, 2024 to 2025</p>
+        </div>
+
+        <div class="cake-container">
+            <img src="pics/cake.png" 
+                 alt="Our Custom Anniversary Cake" 
+                 class="virtual-cake">
+            
+            <p style="color: #ffaaaa; margin-top: 15px; font-size: 1.2em;">
+                Blow out the candles and make a wish, my love! 🕯️💖
+            </p>
+        </div>
+
+        <div class="menu-grid">
+            
+            <a href="anniversary_note.html" class="menu-item">
+                <h3>💌 My Heartfelt Love Note</h3>
+                <p>The words I wrote just for you, appearing right now.</p>
+            </a>
+            
+            <a href="anniversary_song.html" class="menu-item">
+                <h3>🎶 The Song I Wrote For You</h3>
+                <p>A track dedicated to our first year of LDR magic.</p>
+            </a>
+            
+            <a href="anniversary_pics.html" class="menu-item">
+                <h3>📸 Our Year of Memories</h3>
+                <p>A gallery of screenshots and favorite moments.</p>
+            </a>
+            
+        </div>
+        
+    </div>
+</body>
+</html>

@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Our Love Story: Varsh & Moksh</title>
+    <style>
+        /* BASE STYLES & ANIMATIONS */
+        body {
+            font-family: 'Georgia', serif; 
+            background-color: #1a1a1a; /* Dark background */
+            color: #e6e6e6; /* Light text */
+            text-align: center;
+            margin: 0;
+            padding: 0;
+            overflow-x: hidden;
+        }
+
+        /* HERO SECTION - The Main Dedication */
+        .hero {
+            background-color: #33001a; /* Very dark red/purple */
+            padding: 80px 20px;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            position: relative;
+        }
+
+        .main-title {
+            font-size: 5.5em;
+            margin: 0;
+            color: #ffffff;
+            font-family: 'Playfair Display', serif; 
+            text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.8);
+            letter-spacing: 5px; 
+        }
+
+        .subtitle {
+            font-size: 1.8em;
+            font-weight: 300;
+            margin: 10px 0 5px;
+            color: #ff6680; /* Pink Accent */
+        }
+        
+        .date-marker {
+            font-size: 1.1em;
+            color: #cccccc;
+            margin-bottom: 30px;
+        }
+
+        /* QUOTE BLOCK */
+        blockquote {
+            font-style: italic;
+            font-size: 1.4em;
+            width: 70%;
+            margin: 30px auto;
+            padding: 20px;
+            border-left: 5px solid #ff6680;
+            color: #cccccc;
+        }
+
+        /* GALLERY */
+        .gallery {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 20px;
+            padding: 40px 0;
+        }
+        .gallery img {
+            width: 200px;
+            height: 200px;
+            object-fit: cover;
+            border-radius: 50%; 
+            box-shadow: 4px 4px 15px rgba(0, 0, 0, 0.5);
+            transition: transform 0.5s ease-in-out;
+            border: 3px solid #ff6680;
+            
+            /* --- FIX TO CENTER FACE --- */
+            object-position: 50% 10%; 
+            /* You can adjust '30%' to pull the image up or down: */
+            /* Try 40% if the face is too high. Try 50% for default center. */
+        }
+        
+        /* NAVIGATION BUTTONS */
+        .nav-link {
+            text-decoration: none;
+            font-size: 1.2em;
+            padding: 15px 30px;
+            margin: 15px 10px;
+            display: inline-block;
+            border-radius: 30px;
+            transition: background 0.3s ease-in-out, transform 0.2s;
+            font-weight: bold;
+        }
+        
+        /* ANNIVERSARY BUTTON (Primary Action) */
+        #anniversary-btn {
+            background: #ff6680; 
+            color: #ffffff;
+            border: 2px solid #ff6680;
+            animation: pulse 2s infinite; 
+        }
+        #anniversary-btn:hover {
+            background: #ffffff;
+            color: #33001a;
+            transform: scale(1.05);
+        }
+
+        /* SECONDARY BUTTONS */
+        .secondary-btn {
+            background: rgba(255, 255, 255, 0.1);
+            color: #e6e6e6;
+            border: 2px solid #e6e6e6;
+        }
+        .secondary-btn:hover {
+            background: #e6e6e6;
+            color: #1a1a1a;
+            transform: scale(1.05);
+        }
+
+        /* ANIMATION */
+        @keyframes pulse {
+            0% { box-shadow: 0 0 0 0 rgba(255, 102, 128, 0.7); }
+            70% { box-shadow: 0 0 0 20px rgba(255, 102, 128, 0); }
+            100% { box-shadow: 0 0 0 0 rgba(255, 102, 128, 0); }
+        }
+        
+    </style>
+</head>
+<body>
+    <div class="hero">
+        <p class="subtitle">Our World, Built on Distance</p>
+        <h1 class="main-title">V A R S H & M O K S H</h1>
+        <p class="date-marker">Since the best day: December 4th, 2024</p>
+        
+        <blockquote>
+            "Our paths met, not by chance, but by destiny. This chronicle is filled with the love that bridges every mile between Varsh and Moksh."
+        </blockquote>
+        
+        <div class="gallery">
+            <img src="pics/her 1.jpeg" alt="Photo 1">
+            <img src="pics/us 1.jpeg" alt="Photo 2">
+            <img src="pics/me 1.jpeg" alt="Photo 3">
+        </div>
+
+        <div style="margin: 20px auto; color: #ffaaaa; font-size: 1.1em;">
+            The distance is temporary, the love is forever.<br>
+            Tucson, USA (MST) | Karimnagar , Inida (IST) <br>
+            <span style="align-items: center;">14,143 KM , 12:30 Hrs difference</span>
+        </div>
+
+        <div>
+            <a href="1anniversary.html" id="anniversary-btn" class="nav-link">
+                **🎁 Moks's Dedication to Varsh: Happy 1 Year! 🗓️**
+            </a>
+            <br>
+            <a href="valentine 2025.html" class="nav-link secondary-btn">
+                💖 Previous Valentine's Wishes
+            </a>
+            <a href="bday.html" class="nav-link secondary-btn">
+                🎂 Birthday Messages
+            </a>
+        </div>
+    </div>
+</body>
+</html>

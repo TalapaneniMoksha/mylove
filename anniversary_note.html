@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Heartfelt Love Note</title>
+    <style>
+        /* BASE STYLES */
+        body {
+            font-family: 'Georgia', serif; 
+            background-color: #000000;
+            color: #ffffff;
+            text-align: center;
+            margin: 0;
+            padding: 0;
+            overflow-x: hidden;
+        }
+        
+        header {
+            background-color: rgba(102, 0, 51, 0.8);
+            padding: 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .back-link {
+            color: white;
+            text-decoration: none;
+            font-size: 1.1em;
+            padding: 10px 15px;
+            background: rgba(255, 255, 255, 0.2);
+            border-radius: 5px;
+        }
+
+        .note-hero {
+            padding: 50px 20px;
+            color: #ff6680;
+        }
+        
+        .love-note {
+            background: #1a1a1a;
+            margin: 30px auto;
+            padding: 50px;
+            border-radius: 20px;
+            width: 80%;
+            max-width: 900px;
+            box-shadow: 0 0 30px rgba(255, 102, 128, 0.5);
+            text-align: left;
+            font-size: 1.3em;
+            line-height: 2; /* Increased line-height for easier reading */
+            color: #ffffff; 
+            border: 3px solid #ff6680;
+        }
+        
+        .typing-effect {
+            display: inline;
+            border-right: 2px solid #ffffff;
+            white-space: pre-wrap;
+            animation: blink 0.75s step-end infinite;
+            font-weight: 500;
+        }
+        @keyframes blink {
+            50% { border-color: transparent; }
+        }
+    </style>
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            // **TYPING EFFECT SCRIPT - YOUR ANNIVERSARY MESSAGE**
+            const anniversaryText = `My dearest Varshuuu,
+
+Happy First Anniversary!
+
+Every time I read these words, I remember the night you opened up to me. It remains the most important moment of my life, the moment my universe gained its center.
+
+You didn't just accept me; you took moksh and began the process of shaping him into a gentleman. 
+
+The distance is the cost of knowing how much you are worth. We will overcome it, just as we have overcome every tough moment this past year.
+
+I am yours, completely and always. I promise to be there for you, in every situation, in every moment.
+This   1 year just flew in a snap and i felt immense pleasure and delightfull for you  being in  my life  and make it worthy and defining a meaning  of  my life.   I never expected that  a girl comes into my life and becomes my top priority  and i cry for her , die for her and live for her.  You are not like other girls who torture their partners if they dont spend their time with them  , you are quite intresting person to explore and throught this journey of 18 months  i  didn’t felt a single bored moment when speaking to you are texting with you  each and every day i came to know a bit about you and there is lot more to explore within you  .   we never met inperson even once  but the bond between us felt like a yearsssss long bond which neither broken nor destroyed. There are times when  you are angry on me  and there are times where we fought for silly reasons but all those are went in vain infront of our strong bond. You stood in my ups and downs you celebrated my success alongside me and you felt bad during my downfall again alongside me and you are the one who pushes me forward  from downgrade along with my parents and you are the who motivates me when ever iam low and stood like a concrete pillar in my life along with my parents.  I dont have words to express my love because my love doesnt have expressions it is just a pure love towards you.  Potititititiiiii be remember that i will be always with you regardless of the situation or place. when ever you fell my prescence is required just lose your eyes and think of me i ll be right beside on the very next second and taking care of you and pampering you my poootititiluuu.    I f i didnt texted you on the very first day  i definetly missed a person like you and i never gona get a person like you again  in my entire life not even in future births ..      My sweet little heart you are everything for me and you are my world and you are my future and thansk for being part of my life and walking along me in this journey of life and my one and only wish is to finish this journey with you being on my side and leading a happy life with you untill i reach grave someday.
+
+Love you, maaaa. Love you, my potttiiiiii. Cutttyyyyy, my life partner.
+`;
+
+            let index = 0;
+            function typeWriter() {
+                const typedElement = document.getElementById("typed-text");
+                if (index < anniversaryText.length) {
+                    typedElement.textContent += anniversaryText.charAt(index);
+                    index++;
+                    setTimeout(typeWriter, 90); 
+                }
+            }
+            setTimeout(typeWriter, 1000); 
+        });
+    </script>
+</head>
+<body>
+    <header>
+        <span>💌 My Love Letter to You</span>
+        <a href="1anniversary.html" class="back-link">← Back to Celebration Hub</a>
+    </header>
+    
+    <div class="note-hero">
+        <h1>A Message Only for My Cariño</h1>
+        <p style="color: #cccccc;">The words I could not say enough times.</p>
+    </div>
+
+    <div class="love-note">
+        <p id="typed-text" class="typing-effect"></p>
+    </div>
+    
+</body>
+</html>

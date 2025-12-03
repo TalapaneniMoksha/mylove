@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>📸 Our Year of Memories</title>
+    <style>
+        /* BASE STYLES */
+        body {
+            font-family: 'Georgia', serif; 
+            background-color: #000000;
+            color: #ffffff;
+            text-align: center;
+            margin: 0;
+            padding: 0;
+            overflow-x: hidden;
+        }
+        
+        header {
+            background-color: rgba(102, 0, 51, 0.8);
+            padding: 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .back-link {
+            color: white;
+            text-decoration: none;
+            font-size: 1.1em;
+            padding: 10px 15px;
+            background: rgba(255, 255, 255, 0.2);
+            border-radius: 5px;
+        }
+
+        .gallery-hero {
+            padding: 50px 20px;
+            color: #ff6680;
+            text-shadow: 0 0 10px #ff6680;
+        }
+        
+        .gallery-hero h1 {
+            font-size: 4em;
+            margin-bottom: 10px;
+        }
+        
+        /* IMAGE GRID CONTAINER */
+        .image-grid {
+            padding: 50px 5%;
+            display: grid;
+            /* Creates a responsive grid that adjusts to fit 300px wide columns */
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            justify-content: center;
+            align-items: stretch;
+        }
+
+        /* INDIVIDUAL PHOTO STYLING */
+        .photo-frame {
+            background: #262626;
+            padding: 15px;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 0 20px rgba(255, 102, 128, 0.4);
+            border: 3px solid #ff6680; /* Pink border */
+            transition: transform 0.4s ease-in-out, box-shadow 0.4s;
+            cursor: pointer;
+            position: relative;
+        }
+
+        .photo-frame:hover {
+            transform: scale(1.05) rotate(1deg); /* Slight lift and rotation on hover */
+            box-shadow: 0 0 35px #ff6680, 0 10px 30px rgba(0, 0, 0, 0.7);
+            z-index: 5;
+        }
+
+        .gallery-img {
+            width: 100%;
+            height: 300px; /* Fixed height for consistent grid rows */
+            object-fit: cover;
+            border-radius: 5px;
+            display: block;
+        }
+
+        .caption {
+            margin-top: 10px;
+            font-size: 1em;
+            color: #ffaaaa;
+            font-style: italic;
+        }
+    </style>
+</head>
+<body>
+    <div class="heaven-container">
+        <header>
+            <span>Our Year of Memories 💖</span>
+            <a href="1anniversary.html" class="back-link">← Back to Celebration Hub</a>
+        </header>
+        
+        <div class="gallery-hero">
+            <h1>The Moments We Saved Forever 🖼️</h1>
+            <p style="color: #cccccc;">Every screenshot, every memory, leading to this day.</p>
+        </div>
+
+        <div class="image-grid">
+            
+            <div class="photo-frame">
+                <img src="pics/memory1.jpg" alt="First Screenshot" class="gallery-img">
+                <p class="caption">The day you sent that funny sticker! 😂</p>
+            </div>
+            
+            <div class="photo-frame">
+                <img src="pics/memory2.jpg" alt="First Video Call" class="gallery-img">
+                <p class="caption">Our first late-night video call face.</p>
+            </div>
+            
+            <div class="photo-frame">
+                <img src="pics/memory3.jpg" alt="Trip Planning" class="gallery-img">
+                <p class="caption">The moment we started planning our trip! ✈️</p>
+            </div>
+            
+            <div class="photo-frame">
+                <img src="pics/memory4.jpg" alt="A Silly Moment" class="gallery-img">
+                <p class="caption">The silliest picture I have of us. ❤️</p>
+            </div>
+
+            </div>
+        
+    </div>
+</body>
+</html>
