@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Our Love Story: Varsh & Moksh</title>
     <style>
-        /* BASE STYLES */
+        /* BASE STYLES & ANIMATIONS */
         body {
             font-family: 'Georgia', serif; 
             background-color: #1a1a1a; /* Dark background */
@@ -14,7 +14,6 @@
             margin: 0;
             padding: 0;
             overflow-x: hidden;
-            scroll-behavior: smooth;
         }
 
         /* HERO SECTION - The Main Dedication */
@@ -74,14 +73,15 @@
             width: 200px;
             height: 200px;
             object-fit: cover;
-            object-position: 50% 40%; /* Adjusted for common headshot placement */
             border-radius: 50%; 
             box-shadow: 4px 4px 15px rgba(0, 0, 0, 0.5);
             transition: transform 0.5s ease-in-out;
             border: 3px solid #ff6680;
-        }
-        .gallery img:hover {
-            transform: scale(1.1);
+            
+            /* --- FIX TO CENTER FACE --- */
+            object-position: 50% 10%; 
+            /* You can adjust '30%' to pull the image up or down: */
+            /* Try 40% if the face is too high. Try 50% for default center. */
         }
         
         /* NAVIGATION BUTTONS */
@@ -128,99 +128,42 @@
             100% { box-shadow: 0 0 0 0 rgba(255, 102, 128, 0); }
         }
         
-        /* STYLE FOR THE WAIT MESSAGE */
-        #wait-message {
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background-color: #000000;
-            color: #ff6680;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            font-size: 2em;
-            text-align: center;
-            padding: 20px;
-            z-index: 9999;
-        }
-        
     </style>
-    <script>
-        document.addEventListener('DOMContentLoaded', function() {
-            // TARGET TIME: Calculated via standard IST/MST conversion.
-            // 12:00 AM IST (Dec 4th) = 11:30 AM MST (Dec 3rd)
-            
-            // Set the date object to the calculated absolute moment (11:30:00 AM MST)
-            const targetTime = new Date('2025-12-03T11:30:00'); 
-
-            const currentTime = new Date();
-            
-            const websiteContent = document.getElementById('website-content');
-            const waitMessage = document.getElementById('wait-message');
-
-            if (currentTime < targetTime) {
-                // Time is before the target. Show the waiting screen.
-                if (websiteContent) websiteContent.style.display = 'none';
-                if (waitMessage) waitMessage.style.display = 'flex';
-                
-            } else {
-                // Time is after the target. Show the website.
-                if (websiteContent) websiteContent.style.display = 'block';
-                if (waitMessage) waitMessage.style.display = 'none';
-            }
-        });
-    </script>
 </head>
 <body>
-    
-    <div id="wait-message" style="display: none;">
-        <p>A secret is waiting for you...</p>
-        <p style="font-size: 0.8em; margin-top: 30px;">
-            Please come back at **12:00 AM IST** on December 4th. ✨
-            <br>(The wait will be worth it, my love!)
-        </p>
-    </div>
-
-    <div id="website-content" style="display: none;">
+    <div class="hero">
+        <p class="subtitle">Our World, Built on Distance</p>
+        <h1 class="main-title">V A R S H & M O K S H</h1>
+        <p class="date-marker">Since the best day: December 4th, 2024</p>
         
-        <div class="hero">
-            <p class="subtitle">Our World, Built on Distance</p>
-            <h1 class="main-title">V A R S H & M O K S H</h1>
-            <p class="date-marker">Since the best day: December 4th, 2024</p>
-            
-            <blockquote>
-                "Our paths met, not by chance, but by destiny. This chronicle is filled with the love that bridges every mile between Varsh and Moksh."
-            </blockquote>
-            
-            <div class="gallery">
-                <img src="pics/7.jpg" alt="Photo 1">
-                <img src="pics/8.jpg" alt="Photo 2">
-                <img src="pics/9.jpg" alt="Photo 3">
-            </div>
-
-            <div style="margin: 20px auto; color: #ffaaaa; font-size: 1.1em;">
-                The distance is temporary, the love is forever.<br>
-                [Your City Time] | [Her City Time]
-            </div>
-
-            <div>
-                <a href="anniversary.html" id="anniversary-btn" class="nav-link">
-                    **🎁 Varsh's Dedication to Moksh: Happy 1 Year! 🗓️**
-                </a>
-                <br>
-                <a href="valentine.html" class="nav-link secondary-btn">
-                    💖 Previous Valentine's Wishes
-                </a>
-                <a href="birthday.html" class="nav-link secondary-btn"> 
-                    🎂 Birthday Messages
-                </a>
-            </div>
+        <blockquote>
+            "Our paths met, not by chance, but by destiny. This chronicle is filled with the love that bridges every mile between Varsh and Moksh."
+        </blockquote>
+        
+        <div class="gallery">
+            <img src="pics/her 1.jpeg" alt="Photo 1">
+            <img src="pics/us 1.jpeg" alt="Photo 2">
+            <img src="pics/me 1.jpeg" alt="Photo 3">
         </div>
-        
-    </div> 
-    
+
+        <div style="margin: 20px auto; color: #ffaaaa; font-size: 1.1em;">
+            The distance is temporary, the love is forever.<br>
+            Tucson, USA (MST) | Karimnagar , Inida (IST) <br>
+            <span style="align-items: center;">14,143 KM , 12:30 Hrs difference</span>
+        </div>
+
+        <div>
+            <a href="1anniversary.html" id="anniversary-btn" class="nav-link">
+                **🎁 Moks's Dedication to Varsh: Happy 1 Year! 🗓️**
+            </a>
+            <br>
+            <a href="valentine 2025.html" class="nav-link secondary-btn">
+                💖 Previous Valentine's Wishes
+            </a>
+            <a href="bday.html" class="nav-link secondary-btn">
+                🎂 Birthday Messages
+            </a>
+        </div>
+    </div>
 </body>
 </html>
