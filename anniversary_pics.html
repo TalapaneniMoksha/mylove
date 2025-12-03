@@ -1,131 +1,173 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>📸 Our Year of Memories</title>
-    <style>
-        /* BASE STYLES */
-        body {
-            font-family: 'Georgia', serif; 
-            background-color: #000000;
-            color: #ffffff;
-            text-align: center;
-            margin: 0;
-            padding: 0;
-            overflow-x: hidden;
-        }
-        
-        header {
-            background-color: rgba(102, 0, 51, 0.8);
-            padding: 20px;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
-        
-        .back-link {
-            color: white;
-            text-decoration: none;
-            font-size: 1.1em;
-            padding: 10px 15px;
-            background: rgba(255, 255, 255, 0.2);
-            border-radius: 5px;
-        }
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Our Memories Slideshow 💖</title>
 
-        .gallery-hero {
-            padding: 50px 20px;
-            color: #ff6680;
-            text-shadow: 0 0 10px #ff6680;
-        }
-        
-        .gallery-hero h1 {
-            font-size: 4em;
-            margin-bottom: 10px;
-        }
-        
-        /* IMAGE GRID CONTAINER */
-        .image-grid {
-            padding: 50px 5%;
-            display: grid;
-            /* Creates a responsive grid that adjusts to fit 300px wide columns */
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 30px;
-            justify-content: center;
-            align-items: stretch;
-        }
+<style>
+    body {
+        margin: 0;
+        background: #000;
+        font-family: 'Georgia', serif;
+        overflow: hidden; /* No scroll */
+    }
 
-        /* INDIVIDUAL PHOTO STYLING */
-        .photo-frame {
-            background: #262626;
-            padding: 15px;
-            border-radius: 10px;
-            overflow: hidden;
-            box-shadow: 0 0 20px rgba(255, 102, 128, 0.4);
-            border: 3px solid #ff6680; /* Pink border */
-            transition: transform 0.4s ease-in-out, box-shadow 0.4s;
-            cursor: pointer;
-            position: relative;
-        }
+    /* SLIDESHOW CONTAINER */
+    .slideshow-container {
+        width: 100vw;
+        height: 100vh;
+        position: relative;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
 
-        .photo-frame:hover {
-            transform: scale(1.05) rotate(1deg); /* Slight lift and rotation on hover */
-            box-shadow: 0 0 35px #ff6680, 0 10px 30px rgba(0, 0, 0, 0.7);
-            z-index: 5;
-        }
+    /* EACH SLIDE */
+    .slide {
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        opacity: 0;
+        transition: opacity 1s ease-in-out;
+    }
 
-        .gallery-img {
-            width: 100%;
-            height: 300px; /* Fixed height for consistent grid rows */
-            object-fit: cover;
-            border-radius: 5px;
-            display: block;
-        }
+    .slide.active {
+        opacity: 1;
+    }
 
-        .caption {
-            margin-top: 10px;
-            font-size: 1em;
-            color: #ffaaaa;
-            font-style: italic;
-        }
-    </style>
+    /* IMAGE – FULL SCREEN, NO CROPPING */
+    .slide img {
+        max-width: 100%;
+        max-height: 100%;
+        object-fit: contain;
+        border-radius: 15px;
+        box-shadow: 0 0 25px #ff6699;
+        transition: transform 0.3s ease, box-shadow 0.3s;
+    }
+
+    .slide img:hover {
+        transform: scale(1.03);
+        box-shadow: 0 0 40px #ff99bb;
+    }
+
+    /* NAV BUTTONS */
+    .prev, .next {
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        padding: 20px;
+        font-size: 25px;
+        color: white;
+        cursor: pointer;
+        user-select: none;
+        background: rgba(255, 102, 153, 0.3);
+        border-radius: 50%;
+        transition: 0.3s;
+    }
+
+    .prev:hover, .next:hover {
+        background: rgba(255, 102, 153, 0.6);
+    }
+
+    .prev { left: 20px; }
+    .next { right: 20px; }
+
+    /* DOTS */
+    .dots {
+        position: absolute;
+        bottom: 20px;
+        width: 100%;
+        text-align: center;
+    }
+
+    .dot {
+        height: 12px;
+        width: 12px;
+        margin: 0 6px;
+        display: inline-block;
+        border-radius: 50%;
+        background: #555;
+        cursor: pointer;
+        transition: background 0.3s;
+    }
+
+    .dot.active {
+        background: #ff6699;
+    }
+</style>
 </head>
+
 <body>
-    <div class="heaven-container">
-        <header>
-            <span>Our Year of Memories 💖</span>
-            <a href="1anniversary.html" class="back-link">← Back to Celebration Hub</a>
-        </header>
-        
-        <div class="gallery-hero">
-            <h1>The Moments We Saved Forever 🖼️</h1>
-            <p style="color: #cccccc;">Every screenshot, every memory, leading to this day.</p>
-        </div>
 
-        <div class="image-grid">
-            
-            <div class="photo-frame">
-                <img src="pics/memory1.jpg" alt="First Screenshot" class="gallery-img">
-                <p class="caption">The day you sent that funny sticker! 😂</p>
-            </div>
-            
-            <div class="photo-frame">
-                <img src="pics/memory2.jpg" alt="First Video Call" class="gallery-img">
-                <p class="caption">Our first late-night video call face.</p>
-            </div>
-            
-            <div class="photo-frame">
-                <img src="pics/memory3.jpg" alt="Trip Planning" class="gallery-img">
-                <p class="caption">The moment we started planning our trip! ✈️</p>
-            </div>
-            
-            <div class="photo-frame">
-                <img src="pics/memory4.jpg" alt="A Silly Moment" class="gallery-img">
-                <p class="caption">The silliest picture I have of us. ❤️</p>
-            </div>
+<div class="slideshow-container">
 
-            </div>
-        
+    <!-- SLIDE 1 -->
+    <div class="slide active">
+        <img src="pics/vc 2.JPG" alt="">
     </div>
+
+    <!-- SLIDE 2 -->
+    <div class="slide">
+        <img src="pics/vc. 1.png" alt="">
+    </div>
+
+    <!-- SLIDE 3 -->
+    <div class="slide">
+        <img src="pics/vc3.JPG" alt="">
+    </div>
+
+    <!-- SLIDE 4 -->
+    <div class="slide">
+        <img src="pics/vc 4.JPG" alt="">
+    </div>
+
+    <!-- Navigation -->
+    <span class="prev" onclick="changeSlide(-1)">❮</span>
+    <span class="next" onclick="changeSlide(1)">❯</span>
+
+    <!-- Dots -->
+    <div class="dots">
+        <span class="dot active" onclick="goToSlide(0)"></span>
+        <span class="dot" onclick="goToSlide(1)"></span>
+        <span class="dot" onclick="goToSlide(2)"></span>
+        <span class="dot" onclick="goToSlide(3)"></span>
+    </div>
+
+</div>
+
+<script>
+    let slideIndex = 0;
+    const slides = document.querySelectorAll(".slide");
+    const dots = document.querySelectorAll(".dot");
+
+    function showSlide(index) {
+        slides.forEach((slide, i) => {
+            slide.classList.remove("active");
+            dots[i].classList.remove("active");
+        });
+        slides[index].classList.add("active");
+        dots[index].classList.add("active");
+    }
+
+    function changeSlide(value) {
+        slideIndex = (slideIndex + value + slides.length) % slides.length;
+        showSlide(slideIndex);
+    }
+
+    function goToSlide(index) {
+        slideIndex = index;
+        showSlide(slideIndex);
+    }
+
+    /* Auto Slide Every 4 Sec */
+    setInterval(() => {
+        changeSlide(1);
+    }, 4000);
+</script>
+
 </body>
 </html>
